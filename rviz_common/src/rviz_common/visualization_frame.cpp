@@ -78,7 +78,7 @@
 #include "./screenshot_dialog.hpp"
 #include "./splash_screen.hpp"
 #include "./tool_manager.hpp"
-#include "./visualization_manager.hpp"
+#include "rviz_common/visualization_manager.hpp"
 #include "./widget_geometry_change_detector.hpp"
 #include "./yaml_config_reader.hpp"
 #include "./yaml_config_writer.hpp"
