@@ -170,6 +170,11 @@ void ViewPicker::getPatchDepthImage(
 
   auto data_ptr = static_cast<uint8_t *>(depth_pixel_box_.data);
 
+  // Assert that depth_pixel_box_ represents each depth pixel using 3 elements of type uint8_t,
+  // and that the series of pixels in depth_pixel_box_.data is a contiguous array of sets of 3.
+  // This ensures that the distance value at each pixel is composed using the correct indices.
+  assert(Ogre::PF_R8G8B8 == depth_pixel_box_.format);
+
   for (uint32_t pixel = 0; pixel < num_pixels; ++pixel) {
     uint8_t a = data_ptr[3 * pixel];
     uint8_t b = data_ptr[3 * pixel + 1];
