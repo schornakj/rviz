@@ -31,9 +31,11 @@
 #ifndef RVIZ_COMMON__INTERACTION__VIEW_PICKER_IFACE_HPP_
 #define RVIZ_COMMON__INTERACTION__VIEW_PICKER_IFACE_HPP_
 
-#include "rviz_common/visibility_control.hpp"
+#include <vector>
 
 #include <OgreVector3.h>
+
+#include "rviz_common/visibility_control.hpp"
 
 namespace Ogre
 {
@@ -65,7 +67,6 @@ public:
     int x,
     int y,
     Ogre::Vector3 & result_point) = 0;
-
 
   /// Return true if the point at x,y in the viewport is showing an object, false otherwise.
   /**
